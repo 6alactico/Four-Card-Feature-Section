@@ -43,7 +43,6 @@ header p {
     flex-direction: column;
     gap: 2rem;
     margin: 4rem auto;
-    
     width: 20rem;
 }
 
@@ -56,6 +55,13 @@ header p {
     gap: 1rem;  
     padding: 2rem 1.875rem;
     text-align: left;
+}
+
+img {
+    align-self: flex-end;
+    padding: 1rem 0;
+    height: auto;
+    width: 4rem;
 }
 
 /* Card text */
@@ -84,13 +90,6 @@ h2 {
 
 .calculator {
     border-top: 0.25rem solid hsl(212, 86%, 64%);
-}
-
-img {
-    align-self: flex-end;
-    padding: 1rem 0;
-    height: auto;
-    width: 4rem;
 }
 
 /* Desktop version */
@@ -133,5 +132,6 @@ img {
 
     header {
         width: 36rem;
+        font-size: ;
     }
 }
