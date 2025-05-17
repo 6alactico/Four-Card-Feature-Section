@@ -14,20 +14,26 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 0.938rem;
     font-weight: 400;
-}  
+} 
+
+header {
+    text-align: center;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
 
 /* Header textual content */
 h1 {
     color: var(--grey500);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 span {
     font-weight: 200;
 }
 
-#introductory-text {
+header p {
     margin-bottom: 1.5rem;
 }
 
@@ -37,7 +43,6 @@ h1 span {
     flex-direction: column;
     gap: 2rem;
     margin: 4rem auto;
-    text-align: center;
     width: 20rem;
 }
 
@@ -50,6 +55,17 @@ h1 span {
     gap: 1rem;  
     padding: 2rem 1.875rem;
     text-align: left;
+}
+
+/* Card text */
+h2 {
+    color: var(--grey500);
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 /* Card border tops */
@@ -69,19 +85,51 @@ h1 span {
     border-top: 0.25rem solid hsl(212, 86%, 64%);
 }
 
-/* Card text */
-h2 {
-    color: var(--grey500);
-}
-
-.card-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
 img {
     align-self: flex-end;
     padding: 1rem 0;
+    height: auto;
     width: 4rem;
+}
+
+/* Desktop version */
+@media screen and (min-width: 48rem) {
+
+    #card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        ". team-builder ."
+        "supervisor karma calculator";
+        gap: 2rem;
+        max-width: 75rem;
+        margin: 4rem auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .supervisor {
+        grid-area: supervisor;
+        position: absolute;
+        bottom: 9.5rem;
+    }
+
+    .team-builder {
+        grid-area: team-builder;
+    }
+
+    .karma {
+        grid-area: karma;
+    }
+
+    .calculator {
+        grid-area: calculator;
+        position: absolute;
+        bottom: 9.5rem;
+    }
+
+    header {
+        width: 36rem;
+    }
 }
